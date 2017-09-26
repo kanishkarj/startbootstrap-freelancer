@@ -19,7 +19,7 @@ var banner = ['/*!\n',
 
 // Compiles SCSS files from /scss into /css
 gulp.task('sass', function() {
-  return gulp.src('scss/freelancer.scss')
+  return gulp.src('scss/main.scss')
     .pipe(sass())
     .pipe(header(banner, {
       pkg: pkg
@@ -32,7 +32,7 @@ gulp.task('sass', function() {
 
 // Minify compiled CSS
 gulp.task('minify-css', ['sass'], function() {
-  return gulp.src('css/freelancer.css')
+  return gulp.src('css/main.css')
     .pipe(cleanCSS({
       compatibility: 'ie8'
     }))
@@ -47,7 +47,7 @@ gulp.task('minify-css', ['sass'], function() {
 
 // Minify custom JS
 gulp.task('minify-js', function() {
-  return gulp.src('js/freelancer.js')
+  return gulp.src('js/script.js')
     .pipe(uglify())
     .pipe(header(banner, {
       pkg: pkg

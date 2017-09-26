@@ -1,0 +1,15 @@
+#projects{
+    padding: 2em;
+    h2{
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .project{
+      border: 0.1em solid $theme-secondary;
+      height: 15em;
+      margin-left:1px;
+    }
+    .project-container{
+      padding-top: 1em;
+    }
+}
