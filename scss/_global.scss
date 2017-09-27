@@ -7,3 +7,12 @@ main{
   width : 80%;
   margin: auto;
 }
+.btn-info{
+  background-color: $theme-success !important;
+  border-color: $theme-success !important;
+  &:hover{
+    background-color: $theme-secondary !important;
+    border-color: $theme-secondary !important;
+    color: $theme-primary !important;
+  }
+}

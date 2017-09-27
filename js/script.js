@@ -47,3 +47,98 @@
   });
 
 })(jQuery); // End of use strict
+
+var projectList = [
+  {
+    img: 'img/bg.jpeg',
+    imgalt: 'img',
+    title: 'Hello',
+    modalhref: '#projectModal1',
+    modalhreftitle: 'projectModal1',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo ultrices rhoncus.',
+    tech: [{
+        title: 'Vue JS',
+        link: 'google.com'
+      },
+      {
+        title: 'Angular JS',
+        link: '#'
+      },
+    ],
+  },
+  {
+    img: 'img/bg.jpeg',
+    imgalt: 'img',
+    title: 'Hello',
+    modalhref: '#projectModal2',
+    modalhreftitle: 'projectModal2',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo ultrices rhoncus.',
+    tech: [{
+        title: 'Vue JS',
+        link: 'google.com'
+      },
+      {
+        title: 'Angular JS',
+        link: '#'
+      },
+    ],
+  },
+  {
+    img: 'img/bg.jpeg',
+    imgalt: 'img',
+    title: 'Hello',
+    modalhref: '#projectModal3',
+    modalhreftitle: 'projectModal3',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo ultrices rhoncus.',
+    tech: [{
+        title: 'Vue JS',
+        link: 'google.com'
+      },
+      {
+        title: 'Angular JS',
+        link: '#'
+      },
+    ],
+  },
+];
+
+var ProjectModal = new Vue({
+  el: '#projectmodal',
+  data: {
+    items:projectList
+  },
+})
+
+var Project = new Vue({
+  el: '#projects',
+  data: {
+    items: projectList
+  },
+  methods: {
+    openLink: function(link) {
+      window.open(link);
+    }
+  }
+})
+
+var Footer = new Vue({
+  el: 'footer',
+  data: {
+    location: 'Indian Institute of Technology <br> Indore',
+    copyright: 'Copyright &copy; Daemon Labs 2017',
+    items: [
+      {
+        link: 'mailto:kanishkarj@hotmail.com',
+        icon: 'fa fa-fw fa-envelope'
+      },
+      {
+        link: 'https://github.com/kanishkarj',
+        icon: 'fa fa-fw fa-github'
+      },
+      {
+        link: 'https://twitter.com/_kanishkarj_',
+        icon: 'fa fa-fw fa-twitter'
+      },
+    ]
+  }
+})

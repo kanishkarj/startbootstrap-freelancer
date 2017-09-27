@@ -25,61 +25,147 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Home</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Home</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
       </div>
-</nav>
+    </div>
+  </nav>
   <header></header>
 
-<main>
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="row">
-      <div class="project-container  col-md-6">
-        <div class="project row">
-          <img class="col-md-5" src="img/bg.jpeg">
-          <div class="col-md-5">
+  <main>
+    <section id="about" class="row">
+      <article class="col-md-9 about-content">
+        <h3>Hi, There!</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis quam a purus facilisis pretium. Integer euismod urna sed mauris placerat pretium. Vestibulum pharetra tempus sem at sollicitudin. Ut lacinia tellus sit amet sapien porttitor, vel
+          bibendum mi interdum.
+        </p>
+      </article>
+      <div class="container col-md-3">
+        <img src="img/bg.jpeg" alt="" class=" img-fluid rounded-circle">
+      </div>
 
+    </section>
+
+    <!-- project Grid Section -->
+    <section id="projects" class="project">
+      <div class="container">
+        <h2 class="text-center">Projects</h2>
+        <hr class="underline">
+        <br>
+        <div class="row">
+          <div class="col-md-4 project-item" v-for="item in items" :item="item">
+            <a class="project-link" :href="item.modalhref" data-toggle="modal">
+              <div class="caption">
+                <div class="caption-content">
+                  <h4>{{item.title}}</h4>
+                  <div class="tech-list-container">
+                    <ul class="tech-list">
+                      <button class="tech-item" v-for="tech in item.tech" v-on:click="openLink(tech.link)">
+                      {{tech.title}}
+                    </button>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <img class="img-fluid" :src="item.img" alt="item.imgalt">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-8 mx-auto text-center">
+          <a href="projects.html" class="btn btn-lg btn-info">
+            <i class="fa fa-external-link-square"></i>
+              See More
+            </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Repertoire</h2>
+      <h3></h3>
+    </section>
+
+
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer id="footer" class="text-center">
+    <div class="footer-above">
+      <div class="container">
+
+        <div class="row">
+          <div class="footer-col col-md-4">
+            <p>
+              &copy; kanishkarj.github.io 2017
+            </p>
+          </div>
+          <div class="footer-col col-md-4"></div>
+          <div class="footer-col col-md-4">
+
+            <ul class="list-inline">
+              <li class="list-inline-item" v-for="item in items">
+                <a class="btn-social" target="_blank" :href="item.link">
+                  <i :class="item.icon" aria-hidden="true" target="_blank"></i>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="project-container  col-md-6">
-        <div class="project row">
 
+  </footer>
+
+  <!-- project Modals -->
+  <div id="projectmodal" class="projectmodal">
+    <div v-for="item in items" class="project-modal modal fade" :id="item.modalhreftitle" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <h2>{{item.title}}</h2>
+                  <hr class="underline">
+                  <br>
+                  <br>
+                  <img class="img-fluid img-centered" :src="item.img" :alt="item.imgalt">
+                  <p v-html="item.desc"></p>
+
+                  <button class="btn btn-success" type="button" data-dismiss="modal">
+                          <i class="fa fa-times"></i>
+                          Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="project-container  col-md-6">
-        <div class="project row">
-
-        </div>
-      </div>
-
     </div>
-  </section>
-
-  <section id="skills">
-    <h2>Repertoire</h2>
-    <h3></h3>
-  </section>
-
-</main>
+  </div>
 
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -87,10 +173,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
-<script src="vendor/vue/vue.js" type="text/javascript"></script>
+  <script src="vendor/vue/vue.js" type="text/javascript"></script>
 
   <script src="js/script.js" type="text/javascript">
-
   </script>
 </body>
 
