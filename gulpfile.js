@@ -47,7 +47,7 @@ gulp.task('minify-css', ['sass'], function() {
 
 // Minify custom JS
 gulp.task('minify-js', function() {
-  gulp.src('js/skills.js')
+  gulp.src('js/common.js')
     .pipe(uglify())
     .pipe(header(banner, {
       pkg: pkg
@@ -59,7 +59,19 @@ gulp.task('minify-js', function() {
     .pipe(browserSync.reload({
       stream: true
     }))
-  return gulp.src('js/script.js')
+    gulp.src('js/index.js')
+      .pipe(uglify())
+      .pipe(header(banner, {
+        pkg: pkg
+      }))
+      .pipe(rename({
+        suffix: '.min'
+      }))
+      .pipe(gulp.dest('js'))
+      .pipe(browserSync.reload({
+        stream: true
+      }))
+  return gulp.src('js/projects.js')
     .pipe(uglify())
     .pipe(header(banner, {
       pkg: pkg

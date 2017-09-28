@@ -222,6 +222,9 @@ header {
       margin: auto;
       vertical-align: text-bottom; }
 
+a:focus {
+  outline: 0; }
+
 .tech-list-container {
   float: right;
   position: relative;
@@ -239,7 +242,7 @@ header {
     position: relative;
     left: 50%; }
     .tech-list-container .tech-list .tech-item {
-      margin: 0 1em 0 0;
+      margin: 0.5em 1em 0 0;
       float: left;
       position: relative;
       padding: 0.1em 0.25em 0.1em 0.25em;
@@ -262,7 +265,9 @@ header {
     right: 0;
     margin: 0 0 2em; }
     .project .project-item img {
-      width: 100%; }
+      width: 100%;
+      height: 15em;
+      object-fit: cover; }
     .project .project-item a {
       background-color: rgba(119, 136, 153, 0.2);
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 0.1em 0.2em rgba(0, 0, 0, 0.24);
@@ -302,12 +307,15 @@ header {
   .project .project-item {
     margin: 0 0 1em; } }
 
+.project-modal h2 {
+  font-size: 2em !important;
+  margin-right: 2em; }
+
 .project-modal .modal-dialog {
   max-width: 100%;
   min-height: 100%;
   margin: 0;
   padding: 0;
-  text-align: center;
   border: none;
   border-radius: 0;
   background-clip: border-box;

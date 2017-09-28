@@ -1,4 +1,7 @@
 // Styling for the project section
+a:focus {
+  outline:0;
+}
 .tech-list-container{
   float:right;
   position:relative;
@@ -21,7 +24,7 @@
     left:50%;
 
     .tech-item{
-      margin: 0 1em 0 0;
+      margin: 0.5em 1em 0 0;
 
       float:left;
       position:relative;
@@ -58,6 +61,8 @@
 
     img{
       width: 100%;
+      height: 15em;
+      object-fit:cover;
     }
 
     a{
@@ -122,18 +127,23 @@
 }
 
 .project-modal {
-
+  h2{
+    font-size: 2em!important;
+    margin-right: 2em;
+  }
   .modal-dialog {
     max-width: 100%;
     min-height: 100%;
     margin: 0;
     padding: 0;
-    text-align: center;
     border: none;
     border-radius: 0;
     background-clip: border-box;
     -webkit-box-shadow: none;
     box-shadow: none;
+
+
+
     .modal-content {
       padding: 2em 0;
       border: 0;

@@ -1,0 +1,2 @@
+
+Kanishkar J is an enthusiastic full stack developer who currently is pursuing his Undergraduate studies in computer science and engineering at Indian Institute of technology Indore. Specializing in popular front-end frameworks such as Angular Js and progressive frameworks such as Vue Js. Uses Django and Laravel extensively for backend development. But if required, will use other frameworks/technologies based on the client's requirements.
