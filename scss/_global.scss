@@ -1,6 +1,6 @@
-@media (max-width) {
+@media (max-width:724px) {
   main{
-    width : 100%;
+    width : 100% !important;
   }
 }
 main{
@@ -15,4 +15,14 @@ main{
     border-color: $theme-secondary !important;
     color: $theme-primary !important;
   }
+}
+
+body{
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+#c{
+  width: 100%;
+  background-color: $gray-lighter;
+  margin: 1em 0 1em 0;
 }

@@ -102,6 +102,127 @@ var projectList = [
   },
 ];
 
+var skills = [
+  {
+    title:"FrontEnd",
+    items:[
+      {
+        img :"img/skills/frontend/html.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/frontend/css.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/frontend/javascript.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/frontend/sass.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/frontend/vue.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/frontend/angular.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/frontend/bootstrap.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/frontend/jquery.svg",
+        link:"",
+      },
+    ]
+  },
+  {
+    title:"BackEnd",
+    items:[
+      {
+        img :"img/skills/backend/laravel.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/backend/django.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/backend/php.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/backend/mysql.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/backend/nodejs.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/backend/meanio.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/backend/express.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/backend/mongodb.svg",
+        link:"",
+      },
+
+    ]
+  },
+  {
+    title:"Build Tools",
+    items:[
+      {
+        img :"img/skills/build_tools/webpack.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/build_tools/gulp.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/build_tools/jekyll.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/build_tools/pelican.png",
+        link:"",
+      },
+
+    ]
+  },
+  {
+    title:"Tools",
+    items:[
+      {
+        img :"img/skills/tools/git.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/tools/github.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/tools/slack.svg",
+        link:"",
+      },
+      {
+        img :"img/skills/tools/atom.svg",
+        link:"",
+      },
+    ]
+  },
+];
+
 var ProjectModal = new Vue({
   el: '#projectmodal',
   data: {
@@ -120,6 +241,19 @@ var Project = new Vue({
     }
   }
 })
+
+var Skills = new Vue({
+  el: '#skills',
+  data: {
+    items:skills
+  },
+  methods: {
+    openLink: function(link) {
+      window.open(link);
+    }
+  }
+})
+
 
 var Footer = new Vue({
   el: 'footer',

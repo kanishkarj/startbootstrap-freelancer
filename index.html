@@ -97,11 +97,21 @@
       </div>
     </section>
 
+
     <section id="skills">
       <h2>Repertoire</h2>
-      <h3></h3>
+      <hr class="underline">
+      <article class="row">
+        <div class="row skill-cont" v-for="item in items">
+          <h4>{{item.title}}</h4>
+          <div class="row skill-item">
+            <div class="skill-img-cont" v-for="skill in item.items" v-on:click="openLink(skill.link)">
+              <img :src="skill.img" alt="" class="img-fluid skill-img">
+            </div>
+          </div>
+        </div>
+      </article>
     </section>
-
 
 
   </main>
@@ -115,7 +125,7 @@
         <div class="row">
           <div class="footer-col col-md-4">
             <p>
-              &copy; kanishkarj.github.io 2017
+              KANISHKAR J &copy; 2017
             </p>
           </div>
           <div class="footer-col col-md-4"></div>
@@ -175,7 +185,8 @@
 
   <script src="vendor/vue/vue.js" type="text/javascript"></script>
 
-  <script src="js/script.js" type="text/javascript">
+  <script src="js/script.js" type="text/javascript"></script>
+
   </script>
 </body>
 

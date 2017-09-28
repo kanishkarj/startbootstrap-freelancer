@@ -12,6 +12,45 @@ nav {
     nav a:hover {
       color: #add8e6 !important; }
 
+#mainNav {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase; }
+  #mainNav a:focus {
+    outline: none; }
+  #mainNav .navbar-brand {
+    font-size: 1.1rem;
+    color: white; }
+    #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+      color: white; }
+  #mainNav .navbar-nav {
+    letter-spacing: 1px; }
+  #mainNav .navbar-toggler {
+    font-size: 14px;
+    padding: 11px;
+    text-transform: uppercase; }
+
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s; }
+    #mainNav .navbar-brand {
+      font-size: 2em;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s; }
+    #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+      color: white;
+      border-radius: 3px; }
+  #mainNav.navbar-shrink {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+    #mainNav.navbar-shrink .navbar-brand {
+      font-size: 1.5em; } }
+
 header {
   background-image: url("../img/bg.svg");
   background-size: contain;
@@ -21,11 +60,57 @@ header {
   padding-top: 37.5%;
   margin-top: 5em; }
 
+@media (max-width: 724px) {
+  .skill-img-cont {
+    width: 33.3334%;
+    padding: 1em; } }
+
+@media (min-width: 724px) {
+  .skill-img-cont {
+    width: 12.5%;
+    padding: 1.5em; } }
+
 #skills {
   padding: 2em; }
   #skills h2 {
     text-align: center;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: bold; }
+  #skills .skill-cont {
+    margin: 2em 0;
+    border: 0.1em solid #add8e6; }
+    #skills .skill-cont h4 {
+      margin: 1em;
+      text-align: center !important;
+      width: 100%;
+      font-weight: lighter;
+      text-transform: uppercase; }
+    #skills .skill-cont .skill-img-cont {
+      margin: 0;
+      vertical-align: baseline !important; }
+      #skills .skill-cont .skill-img-cont:after {
+        display: block;
+        content: '';
+        border-bottom: solid 3px #019fb6;
+        padding: 0.5em 0 0 0;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out; }
+      #skills .skill-cont .skill-img-cont:hover:after {
+        transform: scaleX(1); }
+      #skills .skill-cont .skill-img-cont.fromRight:after {
+        transform-origin: 100% 50%; }
+      #skills .skill-cont .skill-img-cont.fromLeft:after {
+        transform-origin: 0 50%; }
+    #skills .skill-cont .skill-item {
+      width: 100%;
+      border-top: 0.1em solid #eeeeee;
+      padding: 1em 0.5em 0.5em;
+      margin: 0.5em; }
+    #skills .skill-cont .skill-img {
+      height: auto;
+      width: 100%;
+      margin: auto;
+      vertical-align: text-bottom; }
 
 .tech-list-container {
   float: right;
@@ -179,9 +264,9 @@ header {
     width: 70% !important;
     margin: auto !important; } }
 
-@media (max-width) {
+@media (max-width: 724px) {
   main {
-    width: 100%; } }
+    width: 100% !important; } }
 
 main {
   width: 80%;
@@ -195,8 +280,17 @@ main {
     border-color: #add8e6 !important;
     color: steelblue !important; }
 
+body {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif !important; }
+
+#c {
+  width: 100%;
+  background-color: #eeeeee;
+  margin: 1em 0 1em 0; }
+
 footer {
-  color: steelblue; }
+  color: steelblue;
+  border-top: 0.1em solid #add8e6; }
   footer p {
     font-weight: bold; }
   footer .underline {
