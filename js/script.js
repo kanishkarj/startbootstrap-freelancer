@@ -108,35 +108,35 @@ var skills = [
     items:[
       {
         img :"img/skills/frontend/html.svg",
-        link:"",
+        link:"https://www.w3.org/TR/html5/",
       },
       {
         img :"img/skills/frontend/css.svg",
-        link:"",
+        link:"https://www.w3.org/Style/CSS/Overview.en.html",
       },
       {
         img :"img/skills/frontend/javascript.svg",
-        link:"",
+        link:"https://www.javascript.com/",
       },
       {
         img :"img/skills/frontend/sass.svg",
-        link:"",
+        link:"http://sass-lang.com/",
       },
       {
         img :"img/skills/frontend/vue.svg",
-        link:"",
+        link:"http://vuejs.org",
       },
       {
         img :"img/skills/frontend/angular.svg",
-        link:"",
+        link:"https://angular.io/",
       },
       {
         img :"img/skills/frontend/bootstrap.svg",
-        link:"",
+        link:"http://getbootstrap.com/",
       },
       {
         img :"img/skills/frontend/jquery.svg",
-        link:"",
+        link:"http://jquery.com/",
       },
     ]
   },
@@ -145,35 +145,35 @@ var skills = [
     items:[
       {
         img :"img/skills/backend/laravel.svg",
-        link:"",
+        link:"https://laravel.com/",
       },
       {
         img :"img/skills/backend/django.svg",
-        link:"",
+        link:"http://www.djangoproject.com/",
       },
       {
         img :"img/skills/backend/php.svg",
-        link:"",
+        link:"http://php.net/",
       },
       {
         img :"img/skills/backend/mysql.svg",
-        link:"",
+        link:"https://www.mysql.com/",
       },
       {
         img :"img/skills/backend/nodejs.svg",
-        link:"",
+        link:"https://nodejs.org/en/",
       },
       {
         img :"img/skills/backend/meanio.svg",
-        link:"",
+        link:"http://mean.io/",
       },
       {
         img :"img/skills/backend/express.svg",
-        link:"",
+        link:"https://expressjs.com/",
       },
       {
         img :"img/skills/backend/mongodb.svg",
-        link:"",
+        link:"https://www.mongodb.com/",
       },
 
     ]
@@ -183,19 +183,19 @@ var skills = [
     items:[
       {
         img :"img/skills/build_tools/webpack.svg",
-        link:"",
+        link:"https://webpack.js.org/",
       },
       {
         img :"img/skills/build_tools/gulp.svg",
-        link:"",
+        link:"https://gulpjs.com/",
       },
       {
         img :"img/skills/build_tools/jekyll.svg",
-        link:"",
+        link:"https://jekyllrb.com/",
       },
       {
         img :"img/skills/build_tools/pelican.png",
-        link:"",
+        link:"https://blog.getpelican.com/",
       },
 
     ]
@@ -205,19 +205,19 @@ var skills = [
     items:[
       {
         img :"img/skills/tools/git.svg",
-        link:"",
+        link:"https://git-scm.com/",
       },
       {
         img :"img/skills/tools/github.svg",
-        link:"",
+        link:"https://github.com/",
       },
       {
         img :"img/skills/tools/slack.svg",
-        link:"",
+        link:"https://slack.com/",
       },
       {
         img :"img/skills/tools/atom.svg",
-        link:"",
+        link:"https://atom.io",
       },
     ]
   },
@@ -254,12 +254,42 @@ var Skills = new Vue({
   }
 })
 
+var Navbar = new Vue({
+  el: '#mainNav',
+  data: {
+    title:"KANISHKAR J",
+    items:[
+      {
+          title:"about",
+          link:"#about",
+      },
+      {
+          title:"projects",
+          link:"#projects",
+      },
+      {
+          title:"Repertoire",
+          link:"#skills",
+      },
+      {
+          title:"blog",
+          link:"",
+      },
+      {
+          title:"Contact",
+          link:"#footer",
+      },
+    ]
+  },
+
+})
+
 
 var Footer = new Vue({
   el: 'footer',
   data: {
-    location: 'Indian Institute of Technology <br> Indore',
-    copyright: 'Copyright &copy; Daemon Labs 2017',
+
+    copyright: 'KANISHKAR J &copy; 2017',
     items: [
       {
         link: 'mailto:kanishkarj@hotmail.com',
@@ -273,6 +303,11 @@ var Footer = new Vue({
         link: 'https://twitter.com/_kanishkarj_',
         icon: 'fa fa-fw fa-twitter'
       },
+      {
+        link: 'https://www.linkedin.com/in/kanishkar-j-5ba02ab8/',
+        icon: 'fa fa-fw fa-linkedin'
+      },
+
     ]
   }
 })
