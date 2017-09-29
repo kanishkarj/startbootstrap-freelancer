@@ -69,7 +69,7 @@
         <hr class="underline">
         <br>
         <div class="row">
-          <div class="col-md-4 project-item" v-for="item in items" :item="item">
+          <div class="col-md-6 project-item" v-for="item in items" :item="item">
             <a class="project-link" :href="item.modalhref" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
@@ -115,9 +115,8 @@
             </ul>
           </div>
 
-          <div class="footer-col col-md-12">
-            <span>
-              Made with <i class="fa fa-heart pulse"></i> </span>
+          <div class="footer-col col-md-12" v-html="bottom">
+
           </div>
 
         </div>

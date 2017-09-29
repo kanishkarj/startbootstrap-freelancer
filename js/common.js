@@ -53,8 +53,7 @@ var Navbar = new Vue({
 var Footer = new Vue({
   el: 'footer',
   data: {
-
-    copyright: 'KANISHKAR J &copy; 2017',
+		bottom : '<span>Made with <i class="fa fa-heart pulse"></i> Kanishkar J</span>',
     items: [
       {
         link: 'mailto:kanishkarj@hotmail.com',

@@ -28,7 +28,7 @@ var projectList = [
 
   },
   {
-    img: 'img/projects/portfolio(bg).png',
+    img: 'img/projects/portfolio.png',
     imgalt: 'img',
     title: 'kanishkarj.github.io',
     modalhref: '#projectModal2',
@@ -79,6 +79,6 @@ var About = new Vue({
   el: '#about',
   data: {
     title : "Hi there!",
-    desc : "Kanishkar J is an enthusiastic full stack developer who currently is pursuing his Undergraduate studies in computer science and engineering at Indian Institute of technology Indore. Specializing in popular front-end frameworks such as Angular Js and progressive frameworks such as Vue Js. Uses Django and Laravel extensively for backend development. But if required, will use other frameworks/technologies based on the client's requirements.",
+    desc : "I am pursuing my Undergraduate studies in computer science and engineering at Indian Institute of technology Indore. I Specialize in Django and Laravel for backend development. I use Vue js extensively for front end development."
   },
 });
